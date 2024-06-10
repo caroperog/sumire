@@ -1,5 +1,9 @@
 img#logo {
     width: 100px;
-    height: 100px;   
+    height: 100px;
     margin-right: 30px;
+}
+
+.registro{
+    background-color: #E8CDF0;
 }
