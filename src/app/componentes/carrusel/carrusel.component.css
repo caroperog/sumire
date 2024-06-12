@@ -1,0 +1,5 @@
+.carousel-item img {
+    width: 100%; /* Asegura que la imagen siempre use todo el ancho */
+    max-height: 500px; /* Ajusta la altura máxima deseada */
+    object-fit: cover; /* Esto asegura que la imagen cubra el área sin distorsionarse */
+}

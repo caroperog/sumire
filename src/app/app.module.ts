@@ -11,6 +11,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
     RegistroComponent,
     CarritoComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContactoComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,
