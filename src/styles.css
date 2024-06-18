@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: #f7f8fc;
+     background: #f7f8fc 
 }
+
+  #page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 12rem;
+}  

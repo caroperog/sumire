@@ -1,5 +1,5 @@
-<header class=" overflow-hidden py-5">
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
+<header class=" overflow-hidden ">
+    <nav class="navbar navbar-light navbar-expand-lg"  fixed-top style= "background-color: #E2C9F2">
         <div class="container">
             <!--  logo -->
             <a class="navbar-brand " routerLink="/"><img id="logo" src="assets/Logo Sumire.png" alt="logo sumire"></a>
@@ -27,26 +27,26 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Menú
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                            <div class="dropdown-menu"  style= "background-color: #B294F2;">
                                 <li><a class="dropdown-item" routerLink="/">Tortas</a></li>
                                 <li><a class="dropdown-item" routerLink="/">Alfajores</a></li>
                                 <li><a class="dropdown-item" routerLink="/">Brownies</a></li>
                                 <li><a class="dropdown-item" routerLink="/">Fresas</a></li>
-                            </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" routerLink="/nosotros">Quienes Somos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" routerLink="/contacto">Contacto</a>
-                        </li>
+                        </li> 
                       
                       
                     </ul>
                     <!--inicio de sesión y registro -->
                     <div class="d-flex flex-column justify-content-center align-items-center flex-lg-row gap-3 ">
-                        <a routerLink="/login" class="text-black text-decoration-none">Inicia sesión</a>
-                        <a routerLink="/registro" class="text-black px-3 py-1 rounded-4 text-decoration-none registro ">Registro</a>
+                        <a routerLink="/login" class="text-black px-3 py-1 text-decoration-none iniciosesion" >Inicia sesión</a>
+                        <a routerLink="/registro" class="text-black px-3 py-1  text-decoration-none registro "  >Registro</a>
                          
                     </div>
                 </div>

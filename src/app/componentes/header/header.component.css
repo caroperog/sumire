@@ -4,6 +4,20 @@ img#logo {
     margin-right: 30px;
 }
 
-.registro{
-    background-color: #E8CDF0;
+/* .registro:hover{
+    color: #8350F2;
+    border-radius: 20px;
+}
+.iniciosesion:hover{
+    background-color: #B294F2;
+    border-radius: 20px;
+    
+} */
+
+.nav-link:hover{
+    color:#8350F2
+}
+
+.perfil:hover{
+    color:#8350F2
 }
