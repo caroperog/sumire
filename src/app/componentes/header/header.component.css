@@ -9,15 +9,16 @@ img#logo {
     border-radius: 20px;
 }
 .iniciosesion:hover{
-    background-color: #B294F2;
-    border-radius: 20px;
+    color: #8350f2;
     
-} */
+}  */
 
 .nav-link:hover{
     color:#8350F2
 }
 
-.perfil:hover{
+.text-black:hover{
     color:#8350F2
 }
+
+
