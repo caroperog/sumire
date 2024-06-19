@@ -17,7 +17,7 @@ export class AlfajoresComponent {
 
   constructor(private peticion:PeticionService) {}
 
-  cod_prod: string = ""
+  codigo: string = ""
   nombre: string = ""
   estado: number = 1
   datos:any[] = []
@@ -28,7 +28,7 @@ CargarTodas(){
 
   let post = {
     Host: this.peticion.urlHost,
-    path: "/productos/list",
+    path: "/alfajores/list",
     payload:{}
   }
 
@@ -44,7 +44,7 @@ CargarTodas(){
 }
 
 AbrirModal(){
-  this.cod_prod = ""
+  this.codigo = ""
   this.nombre = ""
   this.estado = 1
   this.Idseleccionado = ""
@@ -55,9 +55,9 @@ Guardar(){
 
   let post = {
     Host: this.peticion.urlHost,
-    path: "/productos/save",
+    path: "/alfajores/save",
     payload:{
-      cod_prod:this.cod_prod,
+      codigo:this.codigo,
       nombre:this.nombre,
       estado:this.estado
     }
@@ -97,7 +97,7 @@ EditarId(id:string) {
 
   let post = {
     Host: this.peticion.urlHost,
-    path: "/productos/listId",
+    path: "/alfajores/listId",
     payload:{
       _id:id
     }
@@ -106,7 +106,7 @@ EditarId(id:string) {
   this.peticion.Post(post.Host+post.path, post.payload).then(
     (res:any) => {
       console.log(res)
-      this.cod_prod = res.data [0]. cod_prod
+      this.codigo = res.data [0]. codigo
       this.nombre = res.data [0]. nombre
       this.estado = res.data [0]. estado
       $('#Modalnuevo').modal('show')
@@ -117,7 +117,7 @@ EditarId(id:string) {
 Eliminar() {
   let post = {
     Host: this.peticion.urlHost,
-    path: "/productos/delete",
+    path: "/alfajores/delete",
     payload:{
       _id:this.Idseleccionado
     }
@@ -152,10 +152,10 @@ Actualizar(){
 
   let post = {
     Host: this.peticion.urlHost,
-    path: "/productos/update",
+    path: "/alfajores/update",
     payload:{
       _id: this.Idseleccionado,
-      cod_prod:this.cod_prod,
+      codigo:this.codigo,
       nombre:this.nombre,
       estado:this.estado
     }
