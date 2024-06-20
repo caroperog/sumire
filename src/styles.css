@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 .ventana {
     width: calc(100% - 200px);
     position: absolute;
@@ -30,4 +31,8 @@
     position: absolute;
     top: 25px;
     cursor: pointer;
+
+body{
+    background: #f7f8fc;
+
 }
