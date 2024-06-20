@@ -1,24 +1,19 @@
-<app-header></app-header>
-<!-- <p>{{this.rutaActiva}}</p> -->
-<h1 class="text-center fst-italic"> Nuestros productos </h1>
-<div class="container">
-    <div class="row">
-        <ng-container *ngFor="let item of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
-            <div class="col-6 col-sm-6 col-md-4 col-lg-3" >
-                <div class="itemproducto">
-                    <div class="miproducto">
-                        <img src="/assets/default.png" >
-                    </div>
-                    <div class="clsnombreproducto"> Nombre Producto </div>
-                    <div class="clsprecio">2000</div>
-                    <a href="https://wa.me/+573167184658?text= Hola, estoy interesad@ en este producto" style="color:black">
-                        <div class="btn"> Añadir </div>
-                    </a>
-                    
-                </div>
-            </div>
-        </ng-container >
-        
+<div id="mimenu">
+    <div id="datosusuario">
+        <img src="assets/IA-Sumire.jpeg">
+        <div class="lblnombre">Sumire Detalles</div>
+        <div class="lblrol">Super Administrador</div>
     </div>
+
+    <div class="opciones">
+        <div class="itemmenu" routerLink="/dashboard">Dashborad</div>
+        <div class="itemmenu" routerLink="/usuarios">Usuarios</div>
+        <div class="itemmenu" routerLink="/alfajores">Alfajores</div>
+        <div class="itemmenu" routerLink="/brownies">Brownies</div>
+        <div class="itemmenu" routerLink="/fresas">Fresas</div>
+        <div class="itemmenu" routerLink="/tortas">Tortas</div>
+        <div class="itemmenu" routerLink="/login">Salir</div>
+    </div>
+
 </div>
-<app-footer></app-footer>
+<div id="superior"></div>
