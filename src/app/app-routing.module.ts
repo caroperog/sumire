@@ -10,10 +10,10 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
   {path:"login",component:LoginComponent, pathMatch:"full"},
-  {path:"menu",component:MenuComponent, pathMatch:"full"},
+  {path:"menu",component:MenuComponent,pathMatch:"full"},
   {path:"nosotros",component:NosotrosComponent, pathMatch:"full"},
   {path:"registro",component:RegistroComponent, pathMatch:"full"},
-  {path:"contacto",component:ContactoComponent, pathMatch:"full"}
+  {path:"contacto",component:ContactoComponent, pathMatch:"full"},
 ];
 
 @NgModule({

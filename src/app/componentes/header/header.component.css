@@ -4,14 +4,13 @@ img#logo {
     margin-right: 30px;
 }
 
-/* .registro:hover{
-    color: #8350F2;
-    border-radius: 20px;
+.perfil{
+
+    color:black
 }
-.iniciosesion:hover{
-    color: #8350f2;
-    
-}  */
+ .perfil:hover{
+    color: #8350F2;
+}
 
 .nav-link:hover{
     color:#8350F2

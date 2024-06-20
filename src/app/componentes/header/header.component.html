@@ -1,4 +1,4 @@
-<header class=" overflow-hidden py-5 ">
+<header class="container" >
     <nav class="navbar navbar-light navbar-expand-lg fixed-top" style= "background-color: #E2C9F2"> 
         <div class="container">
             <!--  logo -->
@@ -12,7 +12,7 @@
             <div class=" sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navegación</h5>
+                    
                     <button type="button" class="btn-close shadow-none text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -21,18 +21,18 @@
                     <ul
                         class="navbar-nav justify-content-center align-items-center d-flex flex-column flex-lg-row flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" routerLink="/">Inicio</a>
+                            <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="active">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" routerLink="/menu" id="offcanvasNavbarDropdown"
+                            <a class="nav-link dropdown-toggle" routerLink="/menu" routerLinkActive="active" id="offcanvasNavbarDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Menú
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown"  style= "background-color: #B294F2; ">
-                                <li><a class="dropdown-item" routerLink="/">Tortas</a></li>
-                                <li><a class="dropdown-item" routerLink="/">Alfajores</a></li>
-                                <li><a class="dropdown-item" routerLink="/">Brownies</a></li>
-                                <li><a class="dropdown-item" routerLink="/">Fresas</a></li>
+                                <li><a class="dropdown-item" routerLink="/menu">Tortas</a></li>
+                                <li><a class="dropdown-item" routerLink="/menu">Alfajores</a></li>
+                                <li><a class="dropdown-item" routerLink="/menu">Brownies</a></li>
+                                <li><a class="dropdown-item" routerLink="/menu">Fresas</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -46,9 +46,9 @@
                     </ul>
                     <!--inicio de sesión y registro -->
                     <div class="d-flex flex-column justify-content-center align-items-center flex-lg-row gap-3 ">
-                        <a routerLink="/login" class="text-black px-3 py-1 text-decoration-none iniciosesion " >Inicia sesión</a>
+                        <a routerLink="/login" class=" px-3 py-1 text-decoration-none perfil " >Inicia sesión</a>
                         <a routerLink="/registro"
-                            class="text-black px-3 py-1  text-decoration-none registro "  >Registro</a>
+                            class=" px-3 py-1  text-decoration-none perfil "  >Registro</a>
 
                     </div>
                 </div>
