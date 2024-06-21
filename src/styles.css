@@ -35,7 +35,7 @@
 
 body{
      background: #f7f8fc;
-     padding-top: 17vh; 
+     padding-top: 130px; 
 }
 
   #page-container {
@@ -46,3 +46,7 @@ body{
 #content-wrap {
   padding-bottom: 12rem;
 }  
+
+.navbar {
+  height:130px !important; /* aqui escoges el alto que necesites */
+}

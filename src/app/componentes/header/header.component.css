@@ -21,3 +21,13 @@ img#logo {
 }
 
 
+.dropitem:hover{
+    background-color:#8350F2;
+    color: #f7f8fc;
+    font-weight: 600;
+}
+
+.dropitem:active{
+    background-color:#8350F2;
+    font-weight: 600;
+}

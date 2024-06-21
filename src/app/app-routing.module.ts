@@ -33,10 +33,10 @@ const routes: Routes = [
   {path:"fresas",component:FresasComponent, pathMatch:"full"},
   {path:"tortas",component:TortasComponent, pathMatch:"full"},
   {path:"usuarios",component:UsuariosComponent, pathMatch:"full"},
-  {path:"alfajoreshome",component:AlfajoreshomeComponent, pathMatch:"full"},
-  {path:"brownieshome",component:BrownieshomeComponent, pathMatch:"full"},
-  {path:"fresashome",component:FresashomeComponent, pathMatch:"full"},
-  {path:"tortashome",component:TortashomeComponent, pathMatch:"full"}
+  {path:"menualfajoreshome",component:AlfajoreshomeComponent, pathMatch:"full"},
+  {path:"menubrownieshome",component:BrownieshomeComponent, pathMatch:"full"},
+  {path:"menufresashome",component:FresashomeComponent, pathMatch:"full"},
+  {path:"menutortashome",component:TortashomeComponent, pathMatch:"full"}
 ];
 
 @NgModule({
