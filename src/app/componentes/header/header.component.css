@@ -4,6 +4,18 @@ img#logo {
     margin-right: 30px;
 }
 
-.registro{
-    background-color: #E8CDF0;
+.perfil{
+
+    color:black
+}
+ .perfil:hover{
+    color: #8350F2;
+}
+
+.nav-link:hover{
+    color:#8350F2
+}
+
+.text-black:hover{
+    color:#8350F2
 }
