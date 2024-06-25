@@ -13,10 +13,8 @@ import { BrowniesComponent } from './componentes/brownies/brownies.component';
 import { FresasComponent } from './componentes/fresas/fresas.component';
 import { TortasComponent } from './componentes/tortas/tortas.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
-import { AlfajoreshomeComponent } from './componentes/productos/alfajoreshome/alfajoreshome.component';
-import { BrownieshomeComponent } from './componentes/productos/brownieshome/brownieshome.component';
-import { FresashomeComponent } from './componentes/productos/fresashome/fresashome.component';
-import { TortashomeComponent } from './componentes/productos/tortashome/tortashome.component';
+import { ZonaprivadaComponent } from './componentes/zonaprivada/zonaprivada.component';
+import { CategoriasComponent } from './componentes/categorias/categorias.component';
 
 
 const routes: Routes = [
@@ -33,10 +31,8 @@ const routes: Routes = [
   {path:"fresas",component:FresasComponent, pathMatch:"full"},
   {path:"tortas",component:TortasComponent, pathMatch:"full"},
   {path:"usuarios",component:UsuariosComponent, pathMatch:"full"},
-  {path:"alfajoreshome",component:AlfajoreshomeComponent, pathMatch:"full"},
-  {path:"brownieshome",component:BrownieshomeComponent, pathMatch:"full"},
-  {path:"fresashome",component:FresashomeComponent, pathMatch:"full"},
-  {path:"tortashome",component:TortashomeComponent, pathMatch:"full"}
+  {path:"zonaprivada",component:ZonaprivadaComponent, pathMatch:"full"},
+  {path:"categorias",component:CategoriasComponent, pathMatch:"full"}
 ];
 
 @NgModule({
