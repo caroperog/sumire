@@ -17,6 +17,7 @@ import { ZonaprivadaComponent } from './componentes/zonaprivada/zonaprivada.comp
 import { CategoriasComponent } from './componentes/categorias/categorias.component';
 
 
+
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
   {path:"login",component:LoginComponent, pathMatch:"full"},
