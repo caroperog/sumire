@@ -13,6 +13,12 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ZonaprivusuariosComponent } from './componentes/zonaprivusuarios/zonaprivusuarios.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
+import { CategoriasComponent } from './componentes/categorias/categorias.component';
+import { MenuusuariosComponent } from './componentes/menuusuarios/menuusuarios.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +32,18 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
     HeaderComponent,
     FooterComponent,
     ContactoComponent,
-    CarruselComponent
+    CarruselComponent,
+    ZonaprivusuariosComponent,
+    ProductosComponent,
+    CategoriasComponent,
+    MenuusuariosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

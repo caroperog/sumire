@@ -6,6 +6,9 @@ import { MenuComponent } from './componentes/menu/menu.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { ZonaprivusuariosComponent } from './componentes/zonaprivusuarios/zonaprivusuarios.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
+import { CategoriasComponent } from './componentes/categorias/categorias.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
@@ -13,7 +16,10 @@ const routes: Routes = [
   {path:"menu",component:MenuComponent, pathMatch:"full"},
   {path:"nosotros",component:NosotrosComponent, pathMatch:"full"},
   {path:"registro",component:RegistroComponent, pathMatch:"full"},
-  {path:"contacto",component:ContactoComponent, pathMatch:"full"}
+  {path:"contacto",component:ContactoComponent, pathMatch:"full"},
+  {path:"zonaprivusuarios",component:ZonaprivusuariosComponent, pathMatch:"full"},
+  {path:"productos",component:ProductosComponent, pathMatch:"full"},
+  {path:"categorias",component:CategoriasComponent, pathMatch:"full"}
 ];
 
 @NgModule({

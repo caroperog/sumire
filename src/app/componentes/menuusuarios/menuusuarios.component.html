@@ -1,0 +1,16 @@
+<div id="mimenu">
+    <div id="datosusuario">
+        <img [src]="RutaImagen">
+        <div class="lblnombre">Bienvenido!</div>
+        <div class="lblrol">Usuario</div>
+    </div>
+    <div class="opciones">
+        <div class="itemmenu" routerLink="/dashboard">dashboard</div>
+        <div class="itemmenu" routerLink="/usuarios"> Configuracion de Usuarios</div>
+        <div class="itemmenu" routerLink="/productos">Productos</div>
+        <div class="itemmenu" routerLink="/categorias">Categorias</div>
+        <div class="itemmenu" (click)="cerrarSesion()">Salir</div>
+    </div>
+    
+    </div>
+    <div id="superior"></div>

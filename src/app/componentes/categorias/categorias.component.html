@@ -1,0 +1,105 @@
+<app-menuusuarios></app-menuusuarios>
+<div class="ventana">
+    <div class="titulo">Categorias</div>
+    <div class="btnadd" (click)="abrirModal()">+</div>
+    <div class="datos">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+              <tr>
+              
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of datos" (click)="EditarId(item._id)">
+                <td>{{item.cod_cat}}</td>
+                <td>{{item.nombre}}</td>
+                <td>
+                    <div *ngIf="item.estado == 1">Activo</div>
+                    <div *ngIf="item.estado == 0">Inactivo</div>
+                </td>
+              </tr>
+              <tr>
+            </tbody>
+          </table>
+    </div>
+
+</div>
+ <!-- Modal  -->
+ 
+ 
+  <div class="modal fade" id="modalnuevo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Categorias</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <div class="form-group">
+                <label for="codigo">Codigo Categoria</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="cod_cat" [disabled]="idseleccionado != ''">
+              </div>
+              <div class="form-group">
+                <label for="nombre">Nombre Categoria</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="nombre" >
+              </div>
+              <div class="form-group">
+                <label for="Estado">Estado</label>
+                <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="estado" >
+                  <option value="0">Inactivo</option>
+                  <option value="1">Activo</option>
+                </select>
+              </div>
+        
+        </div> 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="Guardar()" *ngIf="idseleccionado == ''">Guardar</button>
+          <button type="button" class="btn btn-primary"(click)="Actualizar()" *ngIf="idseleccionado != ''">Actualizar</button>
+          <button type="button" class="btn btn-danger" (click)="Eliminar()" *ngIf="idseleccionado != ''">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+   <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal -->
+<!-- </button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Crear nueva categoria</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="codigo">Codigo Categoria</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="cod_cat" [disabled]="idseleccionado != ''">
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre Categoria</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="nombre" >
+        </div>
+        <div class="form-group">
+          <label for="Estado">Estado</label>
+          <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="estado" >
+            <option value="0">Inactivo</option>
+            <option value="1">Activo</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+        <button type="button" class="btn btn-primary">Actualizar</button>
+        <button type="button" class="btn btn-primary">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div> -->
