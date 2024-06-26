@@ -18,6 +18,7 @@ import { CategoriasComponent } from './componentes/categorias/categorias.compone
 
 
 
+
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
   {path:"login",component:LoginComponent, pathMatch:"full"},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:"usuarios",component:UsuariosComponent, pathMatch:"full"},
   {path:"zonaprivada",component:ZonaprivadaComponent, pathMatch:"full"},
   {path:"categorias",component:CategoriasComponent, pathMatch:"full"}
+
 ];
 
 @NgModule({
