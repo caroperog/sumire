@@ -16,12 +16,15 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { AlfajoresComponent } from './componentes/alfajores/alfajores.component';
 import { BrowniesComponent } from './componentes/brownies/brownies.component';
 import { TortasComponent } from './componentes/tortas/tortas.component';
 import { FresasComponent } from './componentes/fresas/fresas.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+import { ZonaprivadaComponent } from './componentes/zonaprivada/zonaprivada.component';
+import { CategoriasComponent } from './componentes/categorias/categorias.component';
+import { InterceptorService } from './servicios/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
     BrowniesComponent,
     TortasComponent,
     FresasComponent,
+    UsuariosComponent,
+    ZonaprivadaComponent,
+    CategoriasComponent,
     UsuariosComponent
   ],
   imports: [
@@ -50,7 +56,13 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: InterceptorService,
+    multi: true
+  }
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

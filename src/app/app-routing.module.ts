@@ -13,6 +13,10 @@ import { BrowniesComponent } from './componentes/brownies/brownies.component';
 import { FresasComponent } from './componentes/fresas/fresas.component';
 import { TortasComponent } from './componentes/tortas/tortas.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+import { ZonaprivadaComponent } from './componentes/zonaprivada/zonaprivada.component';
+import { CategoriasComponent } from './componentes/categorias/categorias.component';
+
+
 
 
 
@@ -31,6 +35,9 @@ const routes: Routes = [
   {path:"tortas",component:TortasComponent, pathMatch:"full"},
   {path:"usuarios",component:UsuariosComponent, pathMatch:"full"},
  
+  {path:"zonaprivada",component:ZonaprivadaComponent, pathMatch:"full"},
+  {path:"categorias",component:CategoriasComponent, pathMatch:"full"}
+
 ];
 
 @NgModule({

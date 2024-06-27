@@ -31,8 +31,17 @@
     position: absolute;
     top: 25px;
     cursor: pointer;
+}
 
 body{
     background: #f7f8fc;
 
+}
+
+h1.tituloproductos {
+    text-align: center;
+    background: #E8CDF0;
+    margin: 32px;
+    border-radius: 20px;
+    margin-bottom: 10px;
 }
