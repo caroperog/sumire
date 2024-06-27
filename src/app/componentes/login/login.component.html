@@ -8,7 +8,7 @@
   <div class=" px-lg-5 py-lg-4 p-4">
       <h1 class="font-weight-bold mb-4 text-center">Inicia Sesión</h1>
 
-      <form class="mb-5">
+      <div class="mb-5">
           <div class="form-group mb-4">
               <label for="exampleInputEmail1">Usuario</label>
               <input type="email" class="form-control bg-dark_ border-1" id="exampleInputEmail1"
@@ -26,8 +26,8 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Recordar datos</label>
           </div>
-          <button type="submit" class="btn w-100" style="background-color:#B294F2">Ingresar</button>
-      </form>
+          <button type="submit" class="btn w-100" style="background-color:#B294F2" (click)="login()">Ingresar</button>
+      </div>
 
       <p class="font-weight-bold text-center">Registrate con:</p>
 

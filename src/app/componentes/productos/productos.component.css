@@ -1,31 +1,7 @@
-.titulo1{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    
+img.miimagenprod {
+    width: 50px;
+    border: solid 1px #ebebeb;
+    border-radius:  40px;
+    height: 50px;
+    background: plum;
 }
-
-.btn{
-    background-color: #B294F2;
-    font-weight: 500;
-}
-
-.btn:hover{
-    background-color:#8350F2 ;
-}
-
-.card:hover{
-    background-color: #e2c9f296;
-}
-
-.modal-footer{
-    border: none !important;
-}
-
-.modal-header{
-    border-color: #B294F2;
-}
-
-.imagen{
-    border:2px solid #E2C9F2;
-}
-
