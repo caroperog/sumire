@@ -39,24 +39,7 @@
                 <option>N/A</option>
             </select>
         </div>
-        <div class="col-md-8">
-            <label for="Direccion" class="form-label">Dirección</label>
-            <input type="text" class="form-control" id="Direccion" [(ngModel)]="Direccion">
-        </div>
-        
-        <div class="col-md-6">
-            <label for="Ciudad" class="form-label">Ciudad</label>
-            <input type="text" class="form-control" id="Ciudad" [(ngModel)]="Ciudad">
-        </div>
-        <div class="col-md-4">
-            <label for="departamento" class="form-label">Departamento</label>
-            <select [(ngModel)]="Departamento" id="departamento" class="form-select">
-                <option selected>Seleccione Departamento</option>
-                <option *ngFor="let departamento of departamentos" [value]="departamento">
-                    {{ departamento }}
-                  </option>
-            </select>
-        </div>
+       
         <div class="col-md-2">
             <label for="Telefono" class="form-label">Telefono</label>
             <input type="text" class="form-control" id="Telefono" [(ngModel)]="Telefono">
