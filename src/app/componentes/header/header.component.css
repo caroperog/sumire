@@ -6,18 +6,21 @@ img#logo {
 
 .perfil{
 
-    color:black
+    color:black;
 }
  .perfil:hover{
     color: #8350F2;
 }
 
 .nav-link:hover{
-    color:#8350F2
+    color:#8350F2;
 }
 
+.active{
+    color: #8350f2 !important;
+}
 .text-black:hover{
-    color:#8350F2
+    color:#8350F2;
 }
 
 

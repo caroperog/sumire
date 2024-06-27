@@ -1,4 +1,8 @@
-/* .texto{
+/*  .texto{
     text-decoration: underline;
-    text-decoration-color: #B294F2;
-} */
+    
+}  */
+
+.titulos{
+    filter: drop-shadow( 3px 3px 8px #B294F2 );;
+}

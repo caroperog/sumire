@@ -27,7 +27,7 @@ const routes: Routes = [
   {path:"registro",component:RegistroComponent, pathMatch:"full"},
   {path:"contacto",component:ContactoComponent, pathMatch:"full"},
   {path:"dashboard",component:DashboardComponent, pathMatch:"full"},
-  {path:"productos",component:ProductosComponent, pathMatch:"full"},
+  {path:"productos/:id",component:ProductosComponent, pathMatch:"full"},
   {path:"alfajores",component:AlfajoresComponent, pathMatch:"full"},
   {path:"brownies",component:BrowniesComponent, pathMatch:"full"},
   {path:"fresas",component:FresasComponent, pathMatch:"full"},

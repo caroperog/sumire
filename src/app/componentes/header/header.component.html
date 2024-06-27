@@ -22,34 +22,35 @@
                     <ul
                         class="navbar-nav justify-content-center align-items-center d-flex flex-column flex-lg-row flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="active">Inicio</a>
-                            <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="active">Inicio</a>
+                            <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >Inicio</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" routerLink="/productos" routerLinkActive="active" id="offcanvasNavbarDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item dropdown"  >
+                            <a class="nav-link d-inline pe-0" routerLinkActive="active" routerLink="/productos/todos"  >
                                 Productos
                             </a>
+                            <a class="nav-link d-inline ps-0 dropdown-toggle" id="offcanvasNavbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            </a>
                             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown"  style= "background-color: #B294F2; ">
-                                <li ><a class="dropdown-item dropitem" routerLink="/menualfajoreshome">Alfajores</a></li>
-                                <li ><a class="dropdown-item dropitem" routerLink="/menubrownieshome">Brownies</a></li>
-                                <li ><a class="dropdown-item dropitem" routerLink="/menufresashome">Fresas</a></li>
-                                <li ><a class="dropdown-item dropitem" routerLink="/menutortashome">Tortas</a></li>
+                                <li ><a class="dropdown-item dropitem" routerLink="/productos/alfajores">Alfajores</a></li>
+                                <li ><a class="dropdown-item dropitem" routerLink="/productos/brownies">Brownies</a></li>
+                                <li ><a class="dropdown-item dropitem" routerLink="/productos/fresas">Fresas</a></li>
+                                <li ><a class="dropdown-item dropitem" routerLink="/productos/tortas">Tortas</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" routerLink="/nosotros">Quienes Somos</a>
+                            <a class="nav-link" routerLink="/nosotros" routerLinkActive="active">Quienes Somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" routerLink="/contacto">Contacto</a>
+                            <a class="nav-link" routerLink="/contacto" routerLinkActive="active"  >Contacto</a>
                         </li>
 
 
                     </ul>
                     <!--inicio de sesión y registro -->
                     <div class="d-flex flex-column justify-content-center align-items-center flex-lg-row gap-3 ">
-                        <a routerLink="/login" class=" px-3 py-1 text-decoration-none perfil " >Inicia sesión</a>
-                        <a routerLink="/registro"
+                        <a routerLink="/login" routerLinkActive="active"  class=" px-3 py-1 text-decoration-none perfil " >Inicia sesión</a>
+                        <a routerLink="/registro"  routerLinkActive="active"  
                             class=" px-3 py-1  text-decoration-none perfil "  >Registro</a>
 
                     </div>
