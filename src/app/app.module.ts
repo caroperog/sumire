@@ -21,10 +21,6 @@ import { AlfajoresComponent } from './componentes/alfajores/alfajores.component'
 import { BrowniesComponent } from './componentes/brownies/brownies.component';
 import { TortasComponent } from './componentes/tortas/tortas.component';
 import { FresasComponent } from './componentes/fresas/fresas.component';
-import { AlfajoreshomeComponent } from './componentes/productos/alfajoreshome/alfajoreshome.component';
-import { BrownieshomeComponent } from './componentes/productos/brownieshome/brownieshome.component';
-import { FresashomeComponent } from './componentes/productos/fresashome/fresashome.component';
-import { TortashomeComponent } from './componentes/productos/tortashome/tortashome.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 
 @NgModule({
@@ -46,10 +42,6 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
     BrowniesComponent,
     TortasComponent,
     FresasComponent,
-    AlfajoreshomeComponent,
-    BrownieshomeComponent,
-    FresashomeComponent,
-    TortashomeComponent,
     UsuariosComponent
   ],
   imports: [
