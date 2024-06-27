@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { PeticionService } from 'src/app/peticion.service';
-import { Renderer2 } from '@angular/core';
+import { PeticionService } from 'src/app/servicios/peticion.service';
 
 
-declare var bootstrap: any;
 declare var $:any
 declare var Swal:any
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-categorias',
@@ -18,7 +17,7 @@ export class CategoriasComponent {
     this.CargarTodas()
   }
 
-  constructor(private peticion: PeticionService, private renderer: Renderer2){}
+ constructor(private peticion: PeticionService, private renderer: Renderer2){}
 
 
 
@@ -27,6 +26,7 @@ nombre:string = ""
 estado:number = 1
 datos:any[] = []
 idseleccionado:string = ""
+
 
 CargarTodas(){
 
@@ -43,8 +43,8 @@ CargarTodas(){
     (res:any) => {
       console.log(res)
       this.datos = res.data
-    }
-  )
+    })
+
 }
 
 abrirModal(){
@@ -57,6 +57,7 @@ abrirModal(){
   const modalElement = this.renderer.selectRootElement('#modalnuevo', true);
   const modalInstance = new bootstrap.Modal(modalElement);
   modalInstance.show();
+  $('#Modalnuevo').modal('show')
 }
 
 
@@ -71,6 +72,7 @@ Guardar(){
      estado:this.estado
     }
   }
+
   this.peticion.Post(post.Host+post.path, post.payload).then(
     (res:any) => {
       console.log(res)
@@ -181,4 +183,5 @@ Actualizar(){
     )
   }
 }
+
 

@@ -1,6 +1,7 @@
 import { Component, Host, OnInit } from '@angular/core';
-import { PeticionService } from 'src/app/peticion.service';
+import { PeticionService } from 'src/app/servicios/peticion.service';
 import { Renderer2 } from '@angular/core';
+
 
 declare var bootstrap: any;
 declare var $:any
@@ -11,7 +12,9 @@ declare var Swal:any
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
-export class ProductosComponent implements OnInit {
+
+export class ProductosComponent implements OnInit{
+
 
   ngOnInit(): void {
     this.CargarTodas()
@@ -20,14 +23,16 @@ export class ProductosComponent implements OnInit {
 
   constructor(private peticion: PeticionService, private renderer: Renderer2){}
 
-cod_cat:string = ""
-cod_prod:string = ""
-nombre:string = ""
-precio: number = 1
-estado:number = 1
-datos:any[] = []
-datoscategorias:any[] = []
-idseleccionado:string = ""
+  cod_cat: string = ""
+  cod_prod: string = ""
+  nombre: string = ""
+  imagen: string = ""
+  precio: number = 0
+  descripcion: string = ""
+  estado: number = 1
+  datos:any[] = []
+  datoscategorias:any[] = []
+  Idseleccionado:string = ""
 
 CargarTodasCategorias(){
 
@@ -48,10 +53,9 @@ CargarTodasCategorias(){
 CargarTodas(){
 
   let post = {
-    Host:this.peticion.urlHost,
-    path:"/productos/list",
-    payload:{
-    }
+    Host: this.peticion.urlHost,
+    path: "/productos/list",
+    payload:{}
   }
   this.peticion.Post(post.Host+post.path, post.payload).then(
     (res:any) => {
@@ -62,13 +66,18 @@ CargarTodas(){
 }
 
 abrirModal(){
+  this.cod_cat = this.datoscategorias[0].cod_cat
   this.cod_prod = ""
   this.nombre = ""
+  this.imagen = ""
+  this.precio = 0
+  this.descripcion = ""
   this.estado = 1
-  this.idseleccionado = ""
+  this.Idseleccionado = ""
   const modalElement = this.renderer.selectRootElement('#modalnuevo', true);
   const modalInstance = new bootstrap.Modal(modalElement);
   modalInstance.show();
+  $('#Modalnuevo').modal('show')
 }
 
 
@@ -78,13 +87,16 @@ Guardar(){
     Host:this.peticion.urlHost,
     path:"/productos/save",
     payload:{
-     cod_cat:this.cod_cat,
-     cod_prod:this.cod_prod,
-     nombre:this.nombre,
-     precio:this.precio,
-     estado:this.estado
+     imagen: this.imagen,
+      precio: this.precio,
+      cod_cat:this.cod_cat,
+      cod_prod:this.cod_prod,
+      nombre:this.nombre,
+      estado:this.estado,
+      descripcion: this.descripcion
     }
   }
+
   this.peticion.Post(post.Host+post.path, post.payload).then(
     (res:any) => {
       console.log(res)
@@ -121,14 +133,17 @@ EditarId(id:string){
   this.peticion.Post(post.Host+post.path, post.payload).then(
     (res:any) => {
       console.log(res)
-      this.cod_cat = res.data[0].cod_cat
-      this.cod_prod = res.data[0].cod_prod
-      this.nombre = res.data[0].nombre
-      this.precio = res.data[0].precio
-      this.estado = res.data[0].estado
+     this.cod_cat = res.data [0]. cod_cat
+      this.cod_prod = res.data [0]. cod_prod
+      this.nombre = res.data [0]. nombre
+      this.estado = res.data [0]. estado
+      this.imagen = res.data [0]. imagen
+      this.precio = res.data [0]. precio
+      this.descripcion = res.data [0]. descripcion
       const modalElement = this.renderer.selectRootElement('#modalnuevo', true);
       const modalInstance = new bootstrap.Modal(modalElement);
       modalInstance.show();
+       $('#Modalnuevo').modal('show')
     }
   )
 }
@@ -169,12 +184,13 @@ Actualizar(){
       Host:this.peticion.urlHost,
       path:"/productos/update",
       payload:{
-        _id:this.idseleccionado,
-       cod_cat:this.cod_cat,
-       cod_prod:this.cod_prod,
-       nombre:this.nombre,
-       precio:this.precio,
-       estado:this.estado
+        imagen: this.imagen,
+      precio: this.precio,
+      _id: this.Idseleccionado,
+      cod_cat:this.cod_cat,
+      nombre:this.nombre,
+      estado:this.estado,
+      descripcion:this.descripcion
       }
     }
     this.peticion.Post(post.Host+post.path, post.payload).then(
@@ -198,4 +214,5 @@ Actualizar(){
       }
     )
   }
+
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/auth.service';
 import { Router } from '@angular/router';
+import { PeticionService } from 'src/app/servicios/peticion.service';
 
 declare var $:any
 declare var Swal:any
@@ -39,6 +40,7 @@ export class LoginComponent {
       }
     );
   }
+
 }
       
 

@@ -13,12 +13,21 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { ZonaprivusuariosComponent } from './componentes/zonaprivusuarios/zonaprivusuarios.component';
-import { ProductosComponent } from './componentes/productos/productos.component';
-import { CategoriasComponent } from './componentes/categorias/categorias.component';
 import { MenuusuariosComponent } from './componentes/menuusuarios/menuusuarios.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
+import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
+import { AlfajoresComponent } from './componentes/alfajores/alfajores.component';
+import { BrowniesComponent } from './componentes/brownies/brownies.component';
+import { TortasComponent } from './componentes/tortas/tortas.component';
+import { FresasComponent } from './componentes/fresas/fresas.component';
+import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+import { ZonaprivadaComponent } from './componentes/zonaprivada/zonaprivada.component';
+import { CategoriasComponent } from './componentes/categorias/categorias.component';
+import { InterceptorService } from './servicios/interceptor.service';
+
 
 @NgModule({
   declarations: [
@@ -34,18 +43,29 @@ import { MenuusuariosComponent } from './componentes/menuusuarios/menuusuarios.c
     ContactoComponent,
     CarruselComponent,
     ZonaprivusuariosComponent,
+    MenuusuariosComponent,
+    DashboardComponent,
     ProductosComponent,
-    CategoriasComponent,
-    MenuusuariosComponent
+    AlfajoresComponent,
+    BrowniesComponent,
+    TortasComponent,
+    FresasComponent,
+    UsuariosComponent,
+    ZonaprivadaComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
-
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: InterceptorService,
+    multi: true
+  }],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
