@@ -1,0 +1,57 @@
+div#mimenu {
+    width: 200px;
+    background:  #E2C9F2;
+    height: 100vh;
+    float: left;
+}
+
+
+div#datosusuario img {
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    margin-left: calc(50% - 75px);
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+.lblnombre {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.lblrol {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.opciones {
+    padding-left: 8px;
+    color: white;
+}
+
+.itemmenu {
+    margin-bottom: 11px;
+    font-style: italic;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.itemmenu:hover{
+margin-left: 10px;
+}
+
+div#superior {
+    background:  #E2C9F2;
+    height: 39px;
+}

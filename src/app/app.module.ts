@@ -13,6 +13,8 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
+import { ZonaprivusuariosComponent } from './componentes/zonaprivusuarios/zonaprivusuarios.component';
+import { MenuusuariosComponent } from './componentes/menuusuarios/menuusuarios.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { FormsModule } from '@angular/forms';
@@ -25,6 +27,7 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { ZonaprivadaComponent } from './componentes/zonaprivada/zonaprivada.component';
 import { CategoriasComponent } from './componentes/categorias/categorias.component';
 import { InterceptorService } from './servicios/interceptor.service';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +42,8 @@ import { InterceptorService } from './servicios/interceptor.service';
     FooterComponent,
     ContactoComponent,
     CarruselComponent,
+    ZonaprivusuariosComponent,
+    MenuusuariosComponent,
     DashboardComponent,
     ProductosComponent,
     AlfajoresComponent,
@@ -59,9 +64,8 @@ import { InterceptorService } from './servicios/interceptor.service';
     provide: HTTP_INTERCEPTORS,
     useClass: InterceptorService,
     multi: true
-  }
-    
-  ],
+  }],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

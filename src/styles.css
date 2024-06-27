@@ -1,37 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+table.table.table-hover {}
 
 .ventana {
-    width: calc(100% - 200px);
     position: absolute;
     margin-left: 200px;
-    border: solid 2px darkgray;
-    height: calc(100% - 40px);    
-}
-
-.titulo {
-    background: plum;
-    height: 25px;
-    border-radius: 10px;
-    padding-left: 8px;
-    font-weight: 500;
-    font-style: italic;
-    margin-top: 3px;
-    margin-bottom: 40px;
+    width: calc(100% - 200px);
+    border: solid 1px #E2C9F2;
+    height: calc(100% - 39px);
 }
 
 .btnadd {
-    background: brown;
-    width: 39px;
+    background: darkcyan;
+    width: 50px;
     text-align: center;
-    border-radius: 50px;
-    font-size: 23px;
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
     font-weight: 700;
-    margin: 4px;
-    right: 0;
+    margin: 5px;
+    right: 0px;
     position: absolute;
-    top: 25px;
+    bottom: 15px;
     cursor: pointer;
 }
+
+.titulo {
+    background: aliceblue;
+
 
 body{
     background: #f7f8fc;

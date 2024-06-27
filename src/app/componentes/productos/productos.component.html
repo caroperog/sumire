@@ -1,3 +1,4 @@
+
 <app-zonaprivada></app-zonaprivada>
 
 <div class="ventana">
@@ -21,6 +22,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let item of datos" (click)="EditarId(item._id)">
+
                 <td><img src="{{item.imagen}}" class="miimagenprod"></td>
                 <td>{{item.cod_prod}}</td>
                 <td>{{item.cod_cat}}</td>
@@ -31,20 +33,19 @@
                     <div *ngIf="item.estado == 1">Activo</div>
                     <div *ngIf="item.estado == 0">Inactivo</div>
                 </td>
-              </tr>
-             
+              </tr>        
             </tbody>
           </table>
 
 
     </div>
 
-
 </div>
 
 
   
   <!-- Modal -->
+
   <div class="modal fade" id="Modalnuevo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -117,3 +118,4 @@
       </div>
     </div>
   </div>
+

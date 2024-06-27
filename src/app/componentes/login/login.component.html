@@ -12,13 +12,13 @@
           <div class="form-group mb-4">
               <label for="exampleInputEmail1">Usuario</label>
               <input type="email" class="form-control bg-dark_ border-1" id="exampleInputEmail1"
-                  aria-describedby="emailHelp" placeholder="Ingresa tu usuario">
+                  aria-describedby="emailHelp" placeholder="Ingresa tu usuario" [(ngModel)]="Email" [ngModelOptions]="{ standalone: true }">
 
           </div>
           <div class="form-group mb-4">
               <label for="exampleInputPassword1">contraseña</label>
               <input type="password" class="form-control bg-dark_ border-1 mb-1" id="exampleInputPassword1"
-                  placeholder="Ingresa tu contraseña">
+                  placeholder="Ingresa tu contraseña" [(ngModel)]="Password" [ngModelOptions]="{ standalone: true }">
               <a href="#" id="emailHelp" class="form-text text-decoration-none text-muted">¿Olvidaste la
                   contraseña?</a>
           </div>
@@ -27,6 +27,7 @@
               <label class="form-check-label" for="exampleCheck1">Recordar datos</label>
           </div>
           <button type="submit" class="btn btn-primary w-100" (click)="login()">Ingresar</button>
+
       </div>
 
       <p class="font-weight-bold text-center">Registrate con:</p>
@@ -42,7 +43,8 @@
       </div>
   </div>
   <div class="text-center px-lg-5 py-lg-4 p-4">
-      <p class="mb-0">¿Quieres registrarte? <a href="registro"
+      <p class="mb-0">¿Quieres registrarte? <a routerLink="/registro"
+
               class="text-decoration-none font-weight-bold">Crea
               una cuenta</a> </p>
   </div>

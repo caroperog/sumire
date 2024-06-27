@@ -6,6 +6,7 @@ import { MenuComponent } from './componentes/menu/menu.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { ZonaprivusuariosComponent } from './componentes/zonaprivusuarios/zonaprivusuarios.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { AlfajoresComponent } from './componentes/alfajores/alfajores.component';
@@ -19,6 +20,7 @@ import { CategoriasComponent } from './componentes/categorias/categorias.compone
 
 
 
+
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
   {path:"login",component:LoginComponent, pathMatch:"full"},
@@ -26,6 +28,7 @@ const routes: Routes = [
   {path:"nosotros",component:NosotrosComponent, pathMatch:"full"},
   {path:"registro",component:RegistroComponent, pathMatch:"full"},
   {path:"contacto",component:ContactoComponent, pathMatch:"full"},
+  {path:"zonaprivusuarios",component:ZonaprivusuariosComponent, pathMatch:"full"},
   {path:"dashboard",component:DashboardComponent, pathMatch:"full"},
   {path:"productos",component:ProductosComponent, pathMatch:"full"},
   {path:"alfajores",component:AlfajoresComponent, pathMatch:"full"},
