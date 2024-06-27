@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+declare var Swal:any
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +19,14 @@ urlHost:string = "http://localhost:4000"
 
       this.http.post(url,data).toPromise().then(
         (res:any) => {
+          if(res.permisos == true){
+            Swal.fire({
+              title: "Ouchs!",
+              text: res.mensaje,
+              icon: "error"
+            });
+          }
+        
           resolve(res)
         }
       ).catch((error) => {

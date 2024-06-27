@@ -37,9 +37,5 @@ registrar(){
 
 }
 
-eliminar(posicion:number){
-  console.log(posicion)
-  this.datos.splice(posicion, 1)
-}
 
 }
