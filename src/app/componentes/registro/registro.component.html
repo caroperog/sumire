@@ -8,30 +8,40 @@
   <div class=" px-lg-5 py-lg-4 p-4">
       <h1 class="font-weight-bold mb-4 text-center">Registrate</h1>
 
-<div class="container py-5">
-    <div class="row g-3">
-        <div class="col-md-6">
-            <label for="Nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="Nombre" [(ngModel)]="Nombre">
+
+      <div class="container py-5">
+        <div class="form-group mb-4">
+            <label for="exampleInputEmail1">Nombre</label>
+            <input type="email" class="form-control bg-dark_ border-1" id="Nombre"
+                aria-describedby="emailHelp" [(ngModel)]="Nombre">
         </div>
-        <div class="col-md-6">
+
+        <div class="form-group mb-4">
             <label for="Identificacion" class="form-label">Identificación</label>
-            <input type="text" class="form-control" id="Identificacion" [(ngModel)]="Identificacion
-            ">
+            <input type="text" class="form-control bg-dark_ border-1" id="Identificacion" [(ngModel)]="Identificacion">
         </div>
-        <div class="col-md-6">
+
+        <div class="form-group mb-4">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" [(ngModel)]="Email">
         </div>
-        <div class="col-md-6">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" [(ngModel)]="Password">
+
+        <div class="row">
+            <div class="col">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="Password">
+            </div>
+
+            <div class="col-md-6">
+                <label for="password" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="password">
+            </div>
         </div>
-        <div class="col-md-6">
-            <label for="password" class="form-label">Confirmar Contraseña</label>
-            <input type="password" class="form-control" id="password">
-        </div>
-        <div class="col-md-4">
+        
+
+        
+
+        <div class="form-group mb-4">
             <label for="Sexo" class="form-label">Sexo</label>
             <select id="Sexo" class="form-select" [(ngModel)]="Sexo">
                 <option selected></option>
@@ -41,15 +51,15 @@
             </select>
         </div>
        
-        <div class="col-md-2">
+        <div class="form-group mb-4">
             <label for="Telefono" class="form-label">Telefono</label>
             <input type="text" class="form-control" id="Telefono" [(ngModel)]="Telefono">
         </div>
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary" (click)="Guardar()">Registrarse</button>
-        </div>
+        
+        <button type="submit" class="btn btn-primary w-100" (click)="Guardar()">Registrarse</button>
 
     </div>
-</div>
+
+
 
 <app-footer></app-footer>

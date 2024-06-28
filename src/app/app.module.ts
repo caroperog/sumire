@@ -25,8 +25,9 @@ import { TortasComponent } from './componentes/tortas/tortas.component';
 import { FresasComponent } from './componentes/fresas/fresas.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { ZonaprivadaComponent } from './componentes/zonaprivada/zonaprivada.component';
-import { CategoriasComponent } from './componentes/categorias/categorias.component';
 import { InterceptorService } from './servicios/interceptor.service';
+import { CategoriasComponent } from './componentes/categorias/categorias.component';
+
 
 
 @NgModule({
@@ -46,13 +47,13 @@ import { InterceptorService } from './servicios/interceptor.service';
     MenuusuariosComponent,
     DashboardComponent,
     ProductosComponent,
+    CategoriasComponent,
     AlfajoresComponent,
     BrowniesComponent,
     TortasComponent,
     FresasComponent,
     UsuariosComponent,
     ZonaprivadaComponent,
-    CategoriasComponent
   ],
   imports: [
     BrowserModule,

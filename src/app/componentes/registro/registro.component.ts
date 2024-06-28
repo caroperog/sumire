@@ -12,19 +12,26 @@ var $:any
 })
 export class RegistroComponent implements OnInit {
 
-  constructor(private peticion: PeticionService) {
 
-
-  }
 
   ngOnInit(): void {
     
   }
 
-nombre:string = ""
-email:string = ""
-password:string = ""
-datos:any[] = []
+  constructor(private peticion:PeticionService){}
+
+  Identificacion: number = 0
+  Nombre: String = ""
+  Sexo: String = ""
+  Email: String = ""
+  Password: String = ""
+  Direccion: String = ""
+  Telefono: Number = 0
+  Ciudad: String = ""
+  Departamento: String = ""
+  Estado: Number = 1
+  datos:any[] = []
+
 
 registrar(){
 
@@ -32,11 +39,11 @@ registrar(){
 
 
 
-  console.log(this.nombre)
-  console.log(this.password)
-  console.log(this.email)
+  console.log(this.Nombre)
+  console.log(this.Password)
+  console.log(this.Email)
 
-  this.datos.push({nombre:this.nombre, email:this.email})
+  this.datos.push({Nombre:this.Nombre, Email:this.Email})
   console.log(this.datos)
 
 }
@@ -53,18 +60,7 @@ registrar(){
   selectedDepartamento: string = '';
 
   
-  constructor(private peticion:PeticionService){}
-
-  Identificacion: number = 1
-  Nombre: String = ""
-  Sexo: String = ""
-  Email: String = ""
-  Password: String = ""
-  Direccion: String = ""
-  Telefono: Number = 1
-  Ciudad: String = ""
-  Departamento: String = ""
-  Estado: Number = 1
+  
 
 
 

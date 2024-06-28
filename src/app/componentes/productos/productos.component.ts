@@ -65,7 +65,7 @@ CargarTodas(){
   )
 }
 
-abrirModal(){
+AbrirModal(){
   this.cod_cat = this.datoscategorias[0].cod_cat
   this.cod_prod = ""
   this.nombre = ""
@@ -122,7 +122,7 @@ Guardar(){
 }
 
 EditarId(id:string){
-  this.idseleccionado = id
+  this.Idseleccionado = id
   let post = {
     Host:this.peticion.urlHost,
     path:"/productos/listid",
@@ -153,7 +153,7 @@ Eliminar(){
       Host:this.peticion.urlHost,
       path:"/productos/delete",
       payload:{
-       _id: this.idseleccionado
+       _id: this.Idseleccionado
       }
     }
     this.peticion.Post(post.Host+post.path, post.payload).then(

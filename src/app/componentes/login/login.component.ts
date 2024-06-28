@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/app/auth.service';
 import { Router } from '@angular/router';
-import { PeticionService } from 'src/app/servicios/peticion.service';
+import { PeticionService } from 'src/app/peticion.service';
+
 
 declare var $:any
 declare var Swal:any
@@ -12,35 +12,48 @@ declare var Swal:any
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  Email: string = '';
-  Password: string = '';
+ 
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private peticion: PeticionService, private router: Router){}
 
-  login() {
-    console.log(this.Email, this.Password)
-    this.authService.login(this.Email, this.Password).subscribe(
-      (response) => {
-        console.log('Bienvenido!', response)
-        if (response.state) { // Guardar el token en localStorage
-          localStorage.setItem("datousuario", JSON.stringify(response.data));
-          // Redirigir a la zona privada
-          this.router.navigate(['zonaprivusuarios']);
-        }else{  Swal.fire({
-          icon: "error",
-          title: "Ouch!",
-          text: response.mensaje,
-        });       }
-       
-      },
-      (error) => {
-        console.error('Login failed', error);
-        // Manejo de errores
-        alert('Login failed: ' + error.message);
+  Email: string = ''
+  Password: string = ''
+
+  login(){
+
+    var post = {
+      Host:this.peticion.urlHost,
+      path:"/usuarios/login",
+      payload: {
+        Email:this.Email,
+        Password:this.Password
       }
-    );
-  }
+    }
 
+    this.peticion.Post(post.Host + post.path, post.payload).then((res:any) => {
+      console.log(res)
+      if(res.state == true){
+        Swal.fire({
+          title: "Bienvenido!",
+          text: res.mensaje,
+          icon: "success"
+        });
+
+        this.router.navigate(["dashboard"])
+
+      }
+      else{
+        Swal.fire({
+          title: "Ouch!",
+          text: res.mensaje,
+          icon: "error"
+        });
+
+      }
+    })
+
+
+  }
 }
       
 
