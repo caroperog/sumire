@@ -1,8 +1,10 @@
-div#mizonaprivada {
+/* Estilos existentes */
+div#mimenu {
     width: 200px;
     background: darkgray;
     height: 100vh;
     float: left;
+    transition: transform 0.3s ease-in-out;
 }
 
 div#datosusuario img {
@@ -13,6 +15,7 @@ div#datosusuario img {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 .lblnombre {
     width: 100%;
     text-align: center;
@@ -50,4 +53,44 @@ div#datosusuario img {
 div#superior {
     background: darkgray;
     height: 40px;
+}
+
+img {
+    width: 100px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    div#superior {
+        height: auto;
+        padding: 10px;
+    }
+
+    div#mimenu {
+        position: fixed;
+        width: 56%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        z-index: 1050;
+    }
+
+    div#mimenu.show {
+        transform: translateX(0);
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .content-pushed {
+        margin-left: 25%;
+        transition: margin-left 0.3s ease-in-out;
+    }
+
+    .btn-pushed {
+        margin-left: 25%;
+        transition: margin-left 0.3s ease-in-out;
+    }
 }

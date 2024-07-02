@@ -13,8 +13,8 @@ export class LoginComponent {
 
   constructor(private peticion: PeticionService, private router: Router){}
 
-  email: string = ""
-  password: string = ""
+  Email: string = ""
+  Password: string = ""
 
   login(){
 
@@ -22,8 +22,8 @@ export class LoginComponent {
       Host:this.peticion.urlHost,
       path:"/usuarios/login",
       payload: {
-        email:this.email,
-        password:this.password
+        Email:this.Email,
+        Password:this.Password
       }
     }
 
@@ -36,7 +36,7 @@ export class LoginComponent {
           icon: "success"
         });
 
-        this.router.navigate(["dashboard"])
+        this.router.navigate(["categorias"])
 
       }
       else{

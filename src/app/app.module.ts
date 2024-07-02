@@ -25,6 +25,8 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { ZonaprivadaComponent } from './componentes/zonaprivada/zonaprivada.component';
 import { CategoriasComponent } from './componentes/categorias/categorias.component';
 import { InterceptorService } from './servicios/interceptor.service';
+import { ActivarComponent } from './componentes/activar/activar.component';
+import { ActualizardatosuserComponent } from './componentes/actualizardatosuser/actualizardatosuser.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { InterceptorService } from './servicios/interceptor.service';
     UsuariosComponent,
     ZonaprivadaComponent,
     CategoriasComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    ActivarComponent,
+    ActualizardatosuserComponent
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,12 @@ export class ZonaprivadaComponent implements OnInit{
 
   nombre: string = ""
   rol: string = ""
+  menuOpen: boolean = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
 
   cargarestado(){
 

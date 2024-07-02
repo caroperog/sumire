@@ -15,6 +15,8 @@ import { TortasComponent } from './componentes/tortas/tortas.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { ZonaprivadaComponent } from './componentes/zonaprivada/zonaprivada.component';
 import { CategoriasComponent } from './componentes/categorias/categorias.component';
+import { ActivarComponent } from './componentes/activar/activar.component';
+import { ActualizardatosuserComponent } from './componentes/actualizardatosuser/actualizardatosuser.component';
 
 
 
@@ -34,9 +36,10 @@ const routes: Routes = [
   {path:"fresas",component:FresasComponent, pathMatch:"full"},
   {path:"tortas",component:TortasComponent, pathMatch:"full"},
   {path:"usuarios",component:UsuariosComponent, pathMatch:"full"},
- 
   {path:"zonaprivada",component:ZonaprivadaComponent, pathMatch:"full"},
-  {path:"categorias",component:CategoriasComponent, pathMatch:"full"}
+  {path:"categorias",component:CategoriasComponent, pathMatch:"full"},
+  {path:"activar",component:ActivarComponent, pathMatch:"full"},
+  {path:"actualizardatosuser",component:ActualizardatosuserComponent, pathMatch:"full"}
 
 ];
 

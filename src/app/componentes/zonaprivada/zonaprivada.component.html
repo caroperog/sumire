@@ -1,6 +1,18 @@
-<div id="mizonaprivada">
+
+
+
+<div id="superior" class="d-flex justify-content-between align-items-center d-md-none">
+    <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" 
+    data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBothOptions" (click)="toggleMenu()"> <span class="navbar-toggler-icon"></span></button>
+</div>
+
+<div id="mimenu" [ngClass]="{'show': menuOpen}">
+    <div id="superior" class="d-flex justify-content-between align-items-center d-md-none">
+        <button class="btn btn-info" type="button"
+          (click)="toggleMenu()"> <span class="navbar-toggler-icon"></span></button>
+    </div>
     <div id="datosusuario">
-        <img src="assets/avatar.png">
+        <img src="assets/avatarNA.jpg">
         <div class="lblnombre">{{nombre}}</div>
         <div class="lblrol">
             <div *ngIf="rol == '1'">Administrador</div>
@@ -17,7 +29,14 @@
         <div *ngIf="rol == '1'" class="itemmenu" routerLink="/servicios">Servicios</div>
         <div class="itemmenu" (click)="CerrarSession()">Salir</div>
     </div>
-
 </div>
-<div id="superior"></div>
+
+
+
+
+
+
+
+
+  
 

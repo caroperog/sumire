@@ -11,34 +11,54 @@
 
       <div class="mb-5">
         <div class="form-group mb-4">
-            <label for="exampleInputEmail1">Nombre</label>
-            <input type="text" class="form-control" [(ngModel)]="nombre" placeholder="Ingresa tu Nombre"> 
+            <label for="Identificacion">Nombre</label>
+            <input type="text" class="form-control" [(ngModel)]="Nombre" > 
         </div>
 
-        <div class="form-group mb-4">
-            <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Ingresa tu contraseña">   
-        </div>
+        <div class="col-mb-5">
+          <label for="Identificacion" class="form-label">Identificación</label>
+          <input type="text" class="form-control" id="Identificacion" [(ngModel)]="Identificacion">
+      </div>
 
-        <div class="form-group mb-4">
-            <label for="exampleInputPassword1">Correo</label>
-            <input type="password" class="form-control" [(ngModel)]="email" placeholder="Ingresa tu Correo"> 
-        </div>
-
-        <button type="submit" class="btn  w-100" style="background-color:#B294F2" (click)="registrar()">Registrarme</button>
+      <div class="form-group mb-4">
+        <label for="exampleInputPassword1">Correo</label>
+        <input type="email" class="form-control" [(ngModel)]="Email" > 
     </div>
 
-      <p class="font-weight-bold text-center">Registrate con:</p>
 
-      <div class="d-flex justify-content-around">
-          <button type="submit" class="btn btn-outline-light flex-grow-1"><img width="48" height="48"
-                  src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo" /></button>
-          <button type="submit" class="btn btn-outline-light flex-grow-1"><img width="48" height="48"
-                  src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new" /></button>
-          <button type="submit" class="btn btn-outline-light flex-grow-1"><img width="48" height="48"
-                  src="https://img.icons8.com/color/48/instagram-new.png" alt="icloud" /></button>
+   
+      <div class="col-mb-5">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="Password">
+    </div>
 
-      </div>
+    <div class="col-mb-5">
+        <label for="password" class="form-label">Confirmar Contraseña</label>
+        <input type="password" class="form-control" id="password">
+    </div>
+   
+      
+
+    <div class="col-md-4">
+      <label for="Sexo" class="form-label">Sexo</label>
+      <select id="Sexo" class="form-select" [(ngModel)]="Sexo">
+          <option selected></option>
+          <option>Masculino</option>
+          <option>Femenino</option>
+          <option>N/A</option>
+      </select>
+  </div>
+
+  <div class="col-md-6">
+    <label for="Telefono" class="form-label">Telefono</label>
+    <input type="text" class="form-control" id="Telefono" [(ngModel)]="Telefono">
+</div>
+  
+    </div>
+    <div>
+      <button type="submit" class="btn  w-100" style="background-color:#B294F2" (click)="Registrar()">Registrarme</button>
+    </div>
+
   </div>
 
 </div>
